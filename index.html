@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="trx.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+    <section id="beranda" class="tab-content active" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <header></header>
+        <div class="member">          
+            <span>
+                <p id="ucapan"></p>
+                <h5 style="font-size:15px; margin-top:-15px;">{{nama_user}}</h5>
+            </span>
+            <div class="top-actions">
+                <button class="bars-btn" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas">
+                    <i class="material-icons-outlined">menu</i>
+                </button>                                      
+                <button onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=notifikasi'" class="bars-btn" type="button">
+                    <i class="material-icons-outlined">notifications</i>
+                </button>
+                                
+                                
+            </div>
+        </div>
+
+        <div class="section-wrap" style="margin-top:30px;">
+            <div class="container">
+                <section class="the-panel">
+                    <div class="home-quick-info">
+                        <div class="quick-info-card">
+                            <p>Saldo</p>
+                            <div class="quick-info-value">
+                                <span style="font-size: 13px; font-weight: bold;color:#fff;">Rp</span>
+                                <h5 id="saldo-member" data-saldo="{{saldo_user}}">*****</h5>
+                                <i id="toggle-saldo" class="material-icons-outlined">visibility</i>
+                            </div>
+                        </div>
+                        <div class="quick-info-card">
+                            <p>Poin</p>
+                            <div class="quick-info-value">
+                                <h5>{{poin_member}}</h5>
+                            </div>
+                        </div>
+                        <div class="quick-info-card">
+                            <p>Level</p>
+                            <div class="quick-info-value">
+                                <h5>{{nama_membership}}</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-panel home-menu-main">
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="menu"><i class="material-icons-outlined">account_balance_wallet</i><p>Top Up</p></div>
+                        <div onclick="openSection('transaksi')" class="menu"><i class="material-icons-outlined">receipt_long</i><p>Riwayat</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="menu"><i class="material-icons-outlined">swap_horiz</i><p>Mutasi</p></div>
+                        <div onclick="openSection('qrpay')" class="menu"><i class="material-icons-outlined">qr_code</i><p>QR Pay</p></div>
+                    </div>
+                </section>
+
+                <swiper-container class="mySwiper" slides-per-view="auto" centered-slides="true" space-between="10" autoplay="true">
+                    <swiper-slide><img src="https://ruu77.wordpress.com/wp-content/uploads/2026/04/20260421_060936.png" alt="" loading="lazy"></swiper-slide>
+                    <swiper-slide><img src="https://ruu77.wordpress.com/wp-content/uploads/2026/04/20260421_061111.jpg" alt="" loading="lazy"></swiper-slide>
+                    <swiper-slide><img src="https://ruu77.wordpress.com/wp-content/uploads/2026/04/20260421_061342.png" alt="" loading="lazy"></swiper-slide>
+                </swiper-container>
+
+                <div class="card-beranda">
+                    <div class="judul">BEST SELLER</div>
+                    <div class="menu-panel-layanan" style="margin-top:15px;">
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/digital/391515'" class="menu"><i class="material-icons-outlined">smartphone</i><p>Pulsa</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/digital/391516'" class="menu"><i class="material-icons-outlined">wifi</i><p>Paket Data</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/digital/391517'" class="menu"><i class="material-icons-outlined">call</i><p>Telp & SMS</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/digital/391518'" class="menu"><i class="material-icons-outlined">bolt</i><p>Token PLN</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/digital/391519'" class="menu"><i class="material-icons-outlined">wallet</i><p>Dompet Digital</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/digital/391520'" class="menu"><i class="material-icons-outlined">wallet</i><p>E Toll</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/digital/391523'" class="menu"><i class="material-icons-outlined">redeem</i><p>Voucher Data</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/digital/391524'" class="menu"><i class="material-icons-outlined">redeem</i><p>Injeck Voucher</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/digital/391521'" class="menu"><i class="material-icons-outlined">sports_esports</i><p>Game Online</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/digital/391522'" class="menu"><i class="material-icons-outlined">card_giftcard</i><p>Voucher Game</p></div>
+                        <div onclick="window.location.href='#'" class="menu"><i class="material-icons-outlined">satellite_alt</i><p>Pasca Bayar</p></div>
+                        <div onclick="window.location.href='#'" class="menu"><i class="material-icons-outlined">live_tv</i><p>Televisi</p></div>                    
+                    </div>
+                </div>
+
+                <div class="card-beranda">
+                    <div class="judul">Dompet Digital</div>
+                    <div class="menu-panel-layanan" style="margin-top:15px;">
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="menu"><i class="material-icons-outlined">account_balance_wallet</i><p>Dana</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="menu"><i class="material-icons-outlined">payments</i><p>OVO</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="menu"><i class="material-icons-outlined">local_atm</i><p>Gopay</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="menu"><i class="material-icons-outlined">shopping_bag</i><p>Shoppe</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="menu"><i class="material-icons-outlined">link</i><p>Link Aja</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="menu"><i class="material-icons-outlined">account_balance</i><p>Sakuku</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="menu"><i class="material-icons-outlined">savings</i><p>I Saku</p></div>
+                        <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="menu"><i class="material-icons-outlined">credit_card</i><p>Astra pay</p></div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="transaksi" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="account-hero">
+                <div class="account-avatar"><i class="material-icons-outlined">receipt_long</i></div>
+                <div class="account-hero-info">
+                    <h5>Transaksi & History</h5>
+                    <p>Kelola layanan, lihat riwayat, dan pantau status transaksi</p>
+                    <span class="account-badge">Update Real-Time</span>
+                </div>
+                <button class="account-edit-btn"><i class="material-icons-outlined">filter_alt</i></button>
+            </div>
+
+            <div class="search-bar" style="margin-top:10px;">
+                <i class="material-icons-outlined">search</i>
+                <input type="text" placeholder="Cari transaksi atau ID Trx...">
+            </div>
+
+            <div class="account-balance-grid">
+                <div class="account-stat"><p>Total Transaksi</p><h6>{{total_transaksi_invoice}}</h6></div>
+                <div class="account-stat"><p>Berhasil</p><h6>{{total_transaksi_sukses}}</h6></div>
+                <div class="account-stat"><p>Pending</p><h6>{{total_transaksi_dikirim}}</h6></div>
+                <div class="account-stat"><p>Gagal</p><h6>{{total_transaksi_batal}}</h6></div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Filter History</div>
+                <div class="history-filter">
+                    <button class="history-filter-btn active">Semua</button>
+                    <button class="history-filter-btn">Berhasil</button>
+                    <button class="history-filter-btn">Pending</button>
+                    <button class="history-filter-btn">Gagal</button>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">History Transaksi</div>
+                <div class="history-list">
+                    <div class="history-item" onclick="openSection('detailtrx')">
+                        <div class="history-icon success"><i class="material-icons-outlined">check</i></div>
+                        <div class="history-content">
+                            <div class="history-top"><h6>Top Up Saldo</h6><span class="status success">Berhasil</span></div>
+                            <p>Rp 100.000 • 08 Juli 2026, 21:15</p>
+                            <small>ID Trx: TRX240781</small>
+                        </div>
+                    </div>
+                    <div class="history-item" onclick="openSection('detailtrx')">
+                        <div class="history-icon pending"><i class="material-icons-outlined">schedule</i></div>
+                        <div class="history-content">
+                            <div class="history-top"><h6>Pulsa Telkomsel</h6><span class="status pending">Pending</span></div>
+                            <p>Rp 25.000 • 08 Juli 2026, 20:45</p>
+                            <small>ID Trx: TRX240782</small>
+                        </div>
+                    </div>
+                    <div class="history-item" onclick="openSection('detailtrx')">
+                        <div class="history-icon failed"><i class="material-icons-outlined">close</i></div>
+                        <div class="history-content">
+                            <div class="history-top"><h6>Token PLN</h6><span class="status failed">Gagal</span></div>
+                            <p>Rp 50.000 • 08 Juli 2026, 19:10</p>
+                            <small>ID Trx: TRX240783</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="detailtrx" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="detailtrx-hero">
+                <div class="account-avatar"><i class="material-icons-outlined">receipt_long</i></div>
+                <div class="detailtrx-hero-info">
+                    <h5>Detail Transaksi</h5>
+                    <p>Lihat informasi lengkap transaksi kamu</p>
+                </div>
+                <button class="account-edit-btn" onclick="openSection('transaksi')"><i class="material-icons-outlined">arrow_back</i></button>
+            </div>
+
+            <div class="detailtrx-card">
+                <div class="account-card-title">Ringkasan Transaksi</div>
+                <div class="detailtrx-row"><span>ID Transaksi</span><strong>TRX240781</strong></div>
+                <div class="detailtrx-row"><span>Jenis Layanan</span><strong>Top Up Saldo</strong></div>
+                <div class="detailtrx-row"><span>Nominal</span><strong>Rp 100.000</strong></div>
+                <div class="detailtrx-row"><span>Biaya Admin</span><strong>Rp 1.500</strong></div>
+                <div class="detailtrx-row"><span>Total Bayar</span><strong>Rp 101.500</strong></div>
+                <div class="detailtrx-row"><span>Status</span><strong><span class="status success">Berhasil</span></strong></div>
+            </div>
+
+            <div class="detailtrx-card">
+                <div class="account-card-title">Informasi Pengiriman</div>
+                <div class="detailtrx-row"><span>Tujuan</span><strong>Saldo Member</strong></div>
+                <div class="detailtrx-row"><span>Metode Bayar</span><strong>Saldo Akun</strong></div>
+                <div class="detailtrx-row"><span>Waktu Transaksi</span><strong>08 Juli 2026, 21:15</strong></div>
+                <div class="detailtrx-row"><span>Waktu Update</span><strong>08 Juli 2026, 21:16</strong></div>
+            </div>
+
+            <div class="detailtrx-card">
+                <div class="account-card-title">Catatan</div>
+                <p style="font-size:12px; color:var(--muted); line-height:1.6; margin:0;">
+                    Transaksi ini berhasil diproses dan saldo sudah ditambahkan ke akun kamu.
+                </p>
+                <div class="detailtrx-status">Transaksi Sukses</div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Aksi</div>
+                <div class="account-action-list">
+                    <button class="account-action-btn" onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'"><i class="material-icons-outlined">print</i><span>Download</span></button>
+                    <button class="account-action-btn" onclick="openSection('transaksi')"><i class="material-icons-outlined">arrow_back</i><span>Kembali</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rekap" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="account-hero">
+                <div class="account-avatar"><i class="material-icons-outlined">bar_chart</i></div>
+                <div class="account-hero-info">
+                    <h5>Rekap Akun</h5>
+                    <p>Ringkasan transaksi, laporan, dan aktivitas terbaru</p>
+                    <span class="account-badge">Update Otomatis</span>
+                </div>
+                <button class="account-edit-btn"><i class="material-icons-outlined">filter_alt</i></button>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Menu Rekap</div>
+                <div class="rekap-menu-list">
+                    <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="rekap-menu-item">
+                        <div class="rekap-menu-icon"><i class="material-icons-outlined">sync_alt</i></div>
+                        <div class="rekap-menu-details">
+                            <h3>Mutasi Saldo</h3>
+                            <p>Cek penggunaan saldo harian.</p>
+                        </div>
+                        <i class="material-icons-outlined rekap-menu-arrow">chevron_right</i>
+                    </div>
+                    <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="rekap-menu-item">
+                        <div class="rekap-menu-icon"><i class="material-icons-outlined">insert_chart</i></div>
+                        <div class="rekap-menu-details">
+                            <h3>Rekap Transaksi</h3>
+                            <p>Rincian penghasilan hari ini.</p>
+                        </div>
+                        <i class="material-icons-outlined rekap-menu-arrow">chevron_right</i>
+                    </div>
+                    <div onclick="openSection('Chut')" class="rekap-menu-item">
+                        <div class="rekap-menu-icon"><i class="material-icons-outlined">receipt_long</i></div>
+                        <div class="rekap-menu-details">
+                            <h3>Catatan Hutang</h3>
+                            <p>Pengingat hutang pelanggan kamu.</p>
+                        </div>
+                        <i class="material-icons-outlined rekap-menu-arrow">chevron_right</i>
+                    </div>
+                    <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="rekap-menu-item">
+                        <div class="rekap-menu-icon"><i class="material-icons-outlined">storefront</i></div>
+                        <div class="rekap-menu-details">
+                            <h3>Penjualan Konter</h3>
+                            <p>Catat penjualan barang konter kamu.</p>
+                        </div>
+                        <i class="material-icons-outlined rekap-menu-arrow">chevron_right</i>
+                    </div>
+                    <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="rekap-menu-item">
+                        <div class="rekap-menu-icon"><i class="material-icons-outlined">settings</i></div>
+                        <div class="rekap-menu-details">
+                            <h3>Pengaturan</h3>
+                            <p>Atur harga jualmu di sini.</p>
+                        </div>
+                        <i class="material-icons-outlined rekap-menu-arrow">chevron_right</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="informasi" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="account-hero">
+                <div class="account-avatar"><i class="material-icons-outlined">info</i></div>
+                <div class="account-hero-info">
+                    <h5>Informasi & Bantuan</h5>
+                    <p>Pusat info, kendala, pengumuman, dan bantuan pelanggan</p>
+                    <span class="account-badge">Support Center</span>
+                </div>
+                <button class="account-edit-btn"><i class="material-icons-outlined">headset_mic</i></button>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Status Kendala</div>
+                <div class="informasi-list">
+                    <div class="informasi-item">
+                        <i class="material-icons-outlined">network_check</i>
+                        <span><h6>Server Normal</h6><p>Semua layanan utama berjalan dengan baik.</p></span>
+                    </div>
+                    <div class="informasi-item">
+                        <i class="material-icons-outlined">error_outline</i>
+                        <span><h6>Gangguan Minor</h6><p>Beberapa transaksi mungkin tertunda sementara.</p></span>
+                    </div>
+                    <div class="informasi-item">
+                        <i class="material-icons-outlined">history</i>
+                        <span><h6>Estimasi Perbaikan</h6><p>Tim sedang memproses perbaikan sistem.</p></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Pengumuman Terbaru</div>
+                <div class="informasi-list">
+                    <div class="informasi-item">
+                        <i class="material-icons-outlined">notifications</i>
+                        <span><h6>Update Sistem</h6><p>Fitur baru telah ditambahkan untuk mempermudah transaksi.</p></span>
+                    </div>
+                    <div class="informasi-item">
+                        <i class="material-icons-outlined">security</i>
+                        <span><h6>Keamanan Akun</h6><p>Aktifkan PIN dan jaga kerahasiaan data login Anda.</p></span>
+                    </div>
+                    <div class="informasi-item">
+                        <i class="material-icons-outlined">credit_card</i>
+                        <span><h6>Top Up Saldo</h6><p>Pastikan saldo cukup sebelum melakukan transaksi.</p></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">FAQ Cepat</div>
+                <div class="transaksi-list">
+                    <div class="transaksi-item"><i class="material-icons-outlined">help_outline</i><span><h6>Transaksi pending?</h6><p>Tunggu beberapa menit atau hubungi CS.</p></span></div>
+                    <div class="transaksi-item"><i class="material-icons-outlined">help_outline</i><span><h6>Saldo tidak masuk?</h6><p>Periksa mutasi dan status pembayaran.</p></span></div>
+                    <div class="transaksi-item"><i class="material-icons-outlined">help_outline</i><span><h6>Cara komplain?</h6><p>Gunakan menu Komplain atau Live Chat.</p></span></div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Aksi Cepat</div>
+                <div class="account-action-list">
+                    <button onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="account-action-btn"><i class="material-icons-outlined">headset_mic</i><span>Hubungi CS</span></button>
+                    <button onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="account-action-btn"><i class="material-icons-outlined">chat</i><span>WhatsApp</span></button>
+                    <button onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="account-action-btn"><i class="material-icons-outlined">confirmation_number</i><span>Ajukan Tiket</span></button>
+                    <button onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="account-action-btn"><i class="material-icons-outlined">menu_book</i><span>Lihat Panduan</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="akun" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="account-hero">
+                <div class="account-avatar"><img src="{{foto_profil}}" alt="" style="border-radius:15px;"></div>
+                <div class="account-hero-info">
+                    <h5>{{nama_user}}</h5>
+                    <p>ID Member: {{id_user}}</p>
+                    <span class="account-badge">Akun {{status_akun}}</span>
+                </div>
+                <button onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="account-edit-btn"><i class="material-icons-outlined">edit</i></button>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Data Akun</div>
+                <div class="account-info-list">
+                    <div class="account-info-row"><span>Nama Lengkap</span><strong>{{nama_user}}</strong></div>
+                    <div class="account-info-row"><span>ID Member</span><strong>{{id_user}}</strong></div>
+                    <div class="account-info-row"><span>Email</span><strong>{{email_user}}</strong></div>
+                    <div class="account-info-row"><span>Nomor HP</span><strong>{{nomor_telepon}}</strong></div>
+                    <div class="account-info-row"><span>Token User</span><strong>{{token_user}}</strong></div>
+                    <div class="account-info-row"><span>Status</span><strong>{{status_akun}}</strong></div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Fitur Akun</div>
+                <div class="account-menu-grid">
+                    <div onclick="openSection('login')" class="account-menu-item"><i class="material-icons-outlined">login</i><span>Login</span></div>
+                    <div onclick="openSection('daftar')" class="account-menu-item"><i class="material-icons-outlined">person_add</i><span>Daftar</span></div>
+                    <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="account-menu-item"><i class="material-icons-outlined">person</i><span>Profil Saya</span></div>
+                    <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="account-menu-item"><i class="material-icons-outlined">notifications</i><span>Notifikasi</span></div>
+                    <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="account-menu-item"><i class="material-icons-outlined">lock</i><span>Keamanan</span></div>
+                    <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="account-menu-item"><i class="material-icons-outlined">vpn_key</i><span>Ubah PIN</span></div>
+                    <div onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="account-menu-item"><i class="material-icons-outlined">swap_horiz</i><span>Mutasi</span></div>
+                    <div onclick="openSection('transaksi')" class="account-menu-item"><i class="material-icons-outlined">receipt_long</i><span>Riwayat</span></div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Layanan Cepat</div>
+                <div class="account-action-list">
+                    <button onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="account-action-btn"><i class="material-icons-outlined">person_outline</i><span>Edit Profil</span></button>
+                    <button onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="account-action-btn"><i class="material-icons-outlined">shield</i><span>Verifikasi Akun</span></button>
+                    <button onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="account-action-btn"><i class="material-icons-outlined">account_balance_wallet</i><span>Top Up Saldo</span></button>
+                    <button onclick="window.location.href='https://pupucelluler.olshopku.com/akun/?page=topup'" class="account-action-btn"><i class="material-icons-outlined">help_outline</i><span>Hubungi CS</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="login" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="auth-hero">
+                <div class="auth-badge"><i class="material-icons-outlined">lock</i></div>
+                <h5>Login Akun</h5>
+                <p>Masuk untuk akses dashboard, transaksi, dan saldo kamu.</p>
+            </div>
+            <div class="auth-card">
+                <div class="auth-title">Selamat Datang Kembali</div>
+                <div class="auth-form">
+                    <label>Nomor HP / Email</label>
+                    <div class="auth-input"><i class="material-icons-outlined">person</i><input type="text" placeholder="Masukkan nomor HP atau email"></div>
+                    <label>Password</label>
+                    <div class="auth-input"><i class="material-icons-outlined">lock</i><input type="password" placeholder="Masukkan password"></div>
+                    <div class="auth-row"><label class="auth-check"><input type="checkbox"><span>Ingat saya</span></label><a href="javascript:void(0)">Lupa password?</a></div>
+                    <button class="auth-submit" onclick="openSection('beranda')">Login Sekarang</button>
+                    <div class="auth-divider"><span>atau</span></div>
+                    <button class="auth-social google"><i class="material-icons-outlined">g_translate</i><span>Masuk dengan Google</span></button>
+                    <button class="auth-social whatsapp"><i class="material-icons-outlined">chat</i><span>Masuk dengan WhatsApp</span></button>
+                    <p class="auth-footer">Belum punya akun? <a href="javascript:void(0)" onclick="openSection('daftar')">Daftar sekarang</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="daftar" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="auth-hero">
+                <div class="auth-badge"><i class="material-icons-outlined">person_add</i></div>
+                <h5>Buat Akun Baru</h5>
+                <p>Daftar untuk menikmati fitur top up, transaksi, dan riwayat lengkap.</p>
+            </div>
+            <div class="auth-card">
+                <div class="auth-title">Form Pendaftaran</div>
+                <div class="auth-form">
+                    <label>Nama Lengkap</label>
+                    <div class="auth-input"><i class="material-icons-outlined">badge</i><input type="text" placeholder="Masukkan nama lengkap"></div>
+                    <label>Nomor HP</label>
+                    <div class="auth-input"><i class="material-icons-outlined">call</i><input type="text" placeholder="08xxxxxxxxxx"></div>
+                    <label>Email</label>
+                    <div class="auth-input"><i class="material-icons-outlined">mail</i><input type="email" placeholder="contoh@email.com"></div>
+                    <label>Password</label>
+                    <div class="auth-input"><i class="material-icons-outlined">lock</i><input type="password" placeholder="Buat password"></div>
+                    <label>Konfirmasi Password</label>
+                    <div class="auth-input"><i class="material-icons-outlined">lock</i><input type="password" placeholder="Ulangi password"></div>
+                    <label>Kode Referral</label>
+                    <div class="auth-input"><i class="material-icons-outlined">confirmation_number</i><input type="text" placeholder="Opsional"></div>
+                    <label class="auth-check terms"><input type="checkbox"><span>Saya setuju dengan syarat dan ketentuan</span></label>
+                    <button class="auth-submit" onclick="openSection('login')">Daftar Sekarang</button>
+                    <div class="auth-divider"><span>atau</span></div>
+                    <button class="auth-social google"><i class="material-icons-outlined">g_translate</i><span>Daftar dengan Google</span></button>
+                    <button class="auth-social whatsapp"><i class="material-icons-outlined">chat</i><span>Daftar dengan WhatsApp</span></button>
+                    <p class="auth-footer">Sudah punya akun? <a href="javascript:void(0)" onclick="openSection('login')">Login di sini</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="toptup-saldo" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="account-hero">
+                <div class="account-avatar"><i class="material-icons-outlined">account_balance_wallet</i></div>
+                <div class="account-hero-info">
+                    <h5>Top Up Saldo</h5>
+                    <p>Isi saldo akun kamu dengan cepat dan aman</p>
+                    <span class="account-badge">Proses Cepat</span>
+                </div>
+                <button class="account-edit-btn" onclick="openSection('beranda')"><i class="material-icons-outlined">arrow_back</i></button>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Ringkasan Saldo</div>
+                <div class="account-balance-grid">
+                    <div class="account-stat">
+                        <p>Saldo Saat Ini</p>
+                        <h6 id="topup-saldo-now">Rp 0</h6>
+                    </div>
+                    <div class="account-stat">
+                        <p>Minimal Top Up</p>
+                        <h6>Rp 10.000</h6>
+                    </div>
+                    <div class="account-stat">
+                        <p>Estimasi Masuk</p>
+                        <h6>1-5 Menit</h6>
+                    </div>
+                    <div class="account-stat">
+                        <p>Status</p>
+                        <h6>Aktif</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Pilih Nominal</div>
+                <div class="history-filter">
+                    <button class="history-filter-btn active" onclick="setTopupAmount(10000)">Rp 10.000</button>
+                    <button class="history-filter-btn" onclick="setTopupAmount(25000)">Rp 25.000</button>
+                    <button class="history-filter-btn" onclick="setTopupAmount(50000)">Rp 50.000</button>
+                    <button class="history-filter-btn" onclick="setTopupAmount(100000)">Rp 100.000</button>
+                    <button class="history-filter-btn" onclick="setTopupAmount(250000)">Rp 250.000</button>
+                    <button class="history-filter-btn" onclick="setTopupAmount(500000)">Rp 500.000</button>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Form Top Up</div>
+                <div class="auth-form">
+                    <label>Nominal Top Up</label>
+                    <div class="auth-input">
+                        <i class="material-icons-outlined">payments</i>
+                        <input id="topup-amount" type="text" value="10000" placeholder="Masukkan nominal">
+                    </div>
+
+                    <label>Metode Pembayaran</label>
+                    <div class="auth-input">
+                        <i class="material-icons-outlined">credit_card</i>
+                        <input id="topup-method" type="text" value="Transfer Bank / E-Wallet" placeholder="Pilih metode">
+                    </div>
+
+                    <label>Catatan</label>
+                    <div class="auth-input">
+                        <i class="material-icons-outlined">notes</i>
+                        <input id="topup-note" type="text" value="Top Up Saldo Member" placeholder="Catatan top up">
+                    </div>
+
+                    <button class="auth-submit" onclick="submitTopup()">Lanjutkan Top Up</button>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Metode Pembayaran</div>
+                <div class="informasi-list">
+                    <div class="informasi-item"><i class="material-icons-outlined">account_balance</i><span><h6>Transfer Bank</h6><p>BCA, BRI, BNI, Mandiri.</p></span></div>
+                    <div class="informasi-item"><i class="material-icons-outlined">payments</i><span><h6>E-Wallet</h6><p>DANA, OVO, GOPAY, ShopeePay.</p></span></div>
+                    <div class="informasi-item"><i class="material-icons-outlined">qr_code</i><span><h6>QRIS</h6><p>Scan QR untuk pembayaran instan.</p></span></div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Panduan Singkat</div>
+                <div class="informasi-list">
+                    <div class="informasi-item"><i class="material-icons-outlined">check_circle</i><span><h6>Masukkan nominal</h6><p>Gunakan nominal sesuai kebutuhan.</p></span></div>
+                    <div class="informasi-item"><i class="material-icons-outlined">check_circle</i><span><h6>Pilih metode</h6><p>Transfer bank, e-wallet, atau QRIS.</p></span></div>
+                    <div class="informasi-item"><i class="material-icons-outlined">check_circle</i><span><h6>Konfirmasi pembayaran</h6><p>Ikuti instruksi sampai saldo masuk.</p></span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="qrpay" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="account-hero">
+                <div class="account-avatar"><i class="material-icons-outlined">qr_code</i></div>
+                <div class="account-hero-info">
+                    <h5>QR Pay</h5>
+                    <p>Scan QR untuk pembayaran cepat dan aman</p>
+                    <span class="account-badge">Pembayaran Instan</span>
+                </div>
+                <button class="account-edit-btn" onclick="openSection('beranda')">
+                    <i class="material-icons-outlined">arrow_back</i>
+                </button>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Kode QR Pembayaran</div>
+                <div class="qr-box">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=QRPAY%20PUPUCELLULER" alt="QR Pay">
+                </div>
+                <div class="informasi-list" style="margin-top:15px;">
+                    <div class="informasi-item"><i class="material-icons-outlined">account_balance_wallet</i><span><h6>Nominal</h6><p>Rp 50.000</p></span></div>
+                    <div class="informasi-item"><i class="material-icons-outlined">receipt_long</i><span><h6>ID Transaksi</h6><p>QRPAY-240781</p></span></div>
+                    <div class="informasi-item"><i class="material-icons-outlined">schedule</i><span><h6>Status</h6><p>Menunggu Pembayaran</p></span></div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Petunjuk Pembayaran</div>
+                <div class="informasi-list">
+                    <div class="informasi-item"><i class="material-icons-outlined">check_circle</i><span><h6>Buka aplikasi e-wallet</h6><p>Gunakan aplikasi yang mendukung QRIS.</p></span></div>
+                    <div class="informasi-item"><i class="material-icons-outlined">check_circle</i><span><h6>Scan kode QR</h6><p>Pastikan nominal sudah sesuai.</p></span></div>
+                    <div class="informasi-item"><i class="material-icons-outlined">check_circle</i><span><h6>Konfirmasi pembayaran</h6><p>Tunggu notifikasi berhasil.</p></span></div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-action-list">
+                    <button class="account-action-btn" onclick="alert('QR berhasil disalin')">
+                        <i class="material-icons-outlined">content_copy</i><span>Salin QR</span>
+                    </button>
+                    <button class="account-action-btn" onclick="alert('Membuka riwayat pembayaran')">
+                        <i class="material-icons-outlined">history</i><span>Riwayat</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="inputpin" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="auth-hero">
+                <div class="auth-badge"><i class="material-icons-outlined">vpn_key</i></div>
+                <h5>Input PIN</h5>
+                <p>Masukkan PIN untuk melanjutkan transaksi dengan aman.</p>
+            </div>
+
+            <div class="auth-card">
+                <div class="auth-title">Konfirmasi PIN</div>
+
+                <div class="pin-dots">
+                    <span class="pin-dot"></span>
+                    <span class="pin-dot"></span>
+                    <span class="pin-dot"></span>
+                    <span class="pin-dot"></span>
+                    <span class="pin-dot"></span>
+                    <span class="pin-dot"></span>
+                </div>
+
+                <p style="text-align:center; font-size:11px; color:var(--muted); margin-bottom:14px;">
+                    PIN terdiri dari 6 digit
+                </p>
+
+                <div class="pin-keypad">
+                    <button class="pin-key" onclick="addPin(1)">1</button>
+                    <button class="pin-key" onclick="addPin(2)">2</button>
+                    <button class="pin-key" onclick="addPin(3)">3</button>
+                    <button class="pin-key" onclick="addPin(4)">4</button>
+                    <button class="pin-key" onclick="addPin(5)">5</button>
+                    <button class="pin-key" onclick="addPin(6)">6</button>
+                    <button class="pin-key" onclick="addPin(7)">7</button>
+                    <button class="pin-key" onclick="addPin(8)">8</button>
+                    <button class="pin-key" onclick="addPin(9)">9</button>
+                    <button class="pin-key pin-key-action" onclick="clearPin()">Reset</button>
+                    <button class="pin-key" onclick="addPin(0)">0</button>
+                    <button class="pin-key pin-key-action" onclick="backspacePin()">⌫</button>
+                </div>
+
+                <div class="account-action-list" style="margin-top:16px;">
+                    <button class="account-action-btn" onclick="confirmPin()">
+                        <i class="material-icons-outlined">check_circle</i>
+                        <span>Konfirmasi</span>
+                    </button>
+                    <button class="account-action-btn" onclick="openSection('beranda')">
+                        <i class="material-icons-outlined">arrow_back</i>
+                        <span>Kembali</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Chut" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="account-hero">
+                <div class="account-avatar"><i class="material-icons-outlined">receipt_long</i></div>
+                <div class="account-hero-info">
+                    <h5>Catatan Hutang</h5>
+                    <p>Kelola piutang pelanggan dan pantau pembayaran</p>
+                    <span class="account-badge">Piutang Aktif</span>
+                </div>
+                <button class="account-edit-btn" onclick="openSection('rekap')"><i class="material-icons-outlined">arrow_back</i></button>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Ringkasan Hutang</div>
+                <div class="account-balance-grid">
+                    <div class="account-stat"><p>Total Piutang</p><h6 id="debt-total">Rp 0</h6></div>
+                    <div class="account-stat"><p>Sudah Dibayar</p><h6 id="debt-paid">Rp 0</h6></div>
+                    <div class="account-stat"><p>Sisa Hutang</p><h6 id="debt-remaining">Rp 0</h6></div>
+                    <div class="account-stat"><p>Jumlah Pelanggan</p><h6 id="debt-count">0 Orang</h6></div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Tambah Hutang</div>
+                <div class="auth-form">
+                    <label>Nama Pelanggan</label>
+                    <div class="auth-input"><i class="material-icons-outlined">person</i><input id="debt-name" type="text" placeholder="Nama pelanggan"></div>
+                    <label>Nomor HP</label>
+                    <div class="auth-input"><i class="material-icons-outlined">call</i><input id="debt-phone" type="text" placeholder="08xxxxxxxxxx"></div>
+                    <label>Nominal Hutang</label>
+                    <div class="auth-input"><i class="material-icons-outlined">payments</i><input id="debt-amount" type="number" placeholder="Contoh: 150000"></div>
+                    <label>Catatan</label>
+                    <div class="auth-input"><i class="material-icons-outlined">notes</i><input id="debt-note" type="text" placeholder="Jenis barang / keterangan"></div>
+                    <label>Tanggal Jatuh Tempo</label>
+                    <div class="auth-input"><i class="material-icons-outlined">event</i><input id="debt-due" type="date"></div>
+                    <button class="auth-submit" onclick="saveDebt()">Simpan Data</button>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Daftar Hutang</div>
+                <div id="debt-list" class="history-list"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Msaldo" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="account-hero">
+                <div class="account-avatar"><i class="material-icons-outlined">sync_alt</i></div>
+                <div class="account-hero-info">
+                    <h5>Mutasi Saldo</h5>
+                    <p>Riwayat keluar masuk saldo akun kamu</p>
+                    <span class="account-badge">Update Harian</span>
+                </div>
+                <button class="account-edit-btn" onclick="openSection('rekap')"><i class="material-icons-outlined">arrow_back</i></button>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Ringkasan Mutasi</div>
+                <div class="account-balance-grid">
+                    <div class="account-stat"><p>Saldo Awal</p><h6>Rp 2.000.000</h6></div>
+                    <div class="account-stat"><p>Masuk</p><h6>Rp 750.000</h6></div>
+                    <div class="account-stat"><p>Keluar</p><h6>Rp 1.100.000</h6></div>
+                    <div class="account-stat"><p>Saldo Akhir</p><h6>Rp 1.650.000</h6></div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Detail Mutasi</div>
+                <div class="history-list">
+                    <div class="history-item">
+                        <div class="history-icon success"><i class="material-icons-outlined">arrow_downward</i></div>
+                        <div class="history-content">
+                            <div class="history-top"><h6>Top Up Masuk</h6><span class="status success">Masuk</span></div>
+                            <p>Rp 500.000 • Transfer BCA</p>
+                            <small>08 Juli 2026, 21:15</small>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-icon pending"><i class="material-icons-outlined">arrow_upward</i></div>
+                        <div class="history-content">
+                            <div class="history-top"><h6>Pembelian Pulsa</h6><span class="status pending">Keluar</span></div>
+                            <p>Rp 25.000 • TRX240782</p>
+                            <small>08 Juli 2026, 20:45</small>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-icon failed"><i class="material-icons-outlined">arrow_upward</i></div>
+                        <div class="history-content">
+                            <div class="history-top"><h6>Token PLN</h6><span class="status failed">Keluar</span></div>
+                            <p>Rp 50.000 • TRX240783</p>
+                            <small>08 Juli 2026, 19:10</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Aksi Mutasi</div>
+                <div class="account-action-list">
+                    <button class="account-action-btn"><i class="material-icons-outlined">download</i><span>Download</span></button>
+                    <button class="account-action-btn"><i class="material-icons-outlined">filter_alt</i><span>Filter</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="verif" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="account-hero">
+                <div class="account-avatar"><i class="material-icons-outlined">verified_user</i></div>
+                <div class="account-hero-info">
+                    <h5>Verifikasi Akun</h5>
+                    <p>Lengkapi data untuk meningkatkan keamanan akun</p>
+                    <span class="account-badge">Proses Verifikasi</span>
+                </div>
+                <button class="account-edit-btn" onclick="openSection('akun')"><i class="material-icons-outlined">arrow_back</i></button>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Status Verifikasi</div>
+                <div class="account-balance-grid">
+                    <div class="account-stat"><p>Email</p><h6>Terverifikasi</h6></div>
+                    <div class="account-stat"><p>Nomor HP</p><h6>Belum</h6></div>
+                    <div class="account-stat"><p>KTP</p><h6>Belum</h6></div>
+                    <div class="account-stat"><p>Level Akun</p><h6>Basic</h6></div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Langkah Verifikasi</div>
+                <div class="informasi-list">
+                    <div class="informasi-item">
+                        <i class="material-icons-outlined">mail</i>
+                        <span><h6>Verifikasi Email</h6><p>Pastikan email aktif dan bisa diakses.</p></span>
+                    </div>
+                    <div class="informasi-item">
+                        <i class="material-icons-outlined">call</i>
+                        <span><h6>Verifikasi Nomor HP</h6><p>Masukkan nomor aktif untuk OTP.</p></span>
+                    </div>
+                    <div class="informasi-item">
+                        <i class="material-icons-outlined">badge</i>
+                        <span><h6>Upload KTP</h6><p>Unggah foto identitas dengan jelas.</p></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Form Verifikasi</div>
+                <div class="auth-form">
+                    <label>Nama Sesuai KTP</label>
+                    <div class="auth-input"><i class="material-icons-outlined">person</i><input type="text" placeholder="Nama lengkap"></div>
+                    <label>Nomor KTP</label>
+                    <div class="auth-input"><i class="material-icons-outlined">badge</i><input type="text" placeholder="16 digit KTP"></div>
+                    <label>Upload Foto KTP</label>
+                    <div class="auth-input"><i class="material-icons-outlined">upload</i><input type="text" placeholder="Pilih file foto KTP"></div>
+                    <button class="auth-submit">Ajukan Verifikasi</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="chackout" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="account-hero">
+                <div class="account-avatar"><i class="material-icons-outlined">shopping_cart_checkout</i></div>
+                <div class="account-hero-info">
+                    <h5>Chackout</h5>
+                    <p>Konfirmasi pesanan sebelum transaksi diproses</p>
+                    <span class="account-badge">Siap Bayar</span>
+                </div>
+                <button class="account-edit-btn" onclick="openSection('beranda')"><i class="material-icons-outlined">arrow_back</i></button>
+            </div>
+
+            <div class="checkout-card">
+                <div class="checkout-title">Detail Pesanan</div>
+                <div class="checkout-summary">
+                    <div class="checkout-row"><span>Produk</span><strong>Pulsa Telkomsel 50.000</strong></div>
+                    <div class="checkout-row"><span>Nomor Tujuan</span><strong>08xxxxxxxxxx</strong></div>
+                    <div class="checkout-row"><span>Harga Produk</span><strong>Rp 50.000</strong></div>
+                    <div class="checkout-row"><span>Biaya Admin</span><strong>Rp 1.500</strong></div>
+                    <div class="checkout-row checkout-total"><span>Total Bayar</span><strong>Rp 51.500</strong></div>
+                </div>
+            </div>
+
+            <div class="checkout-card">
+                <div class="checkout-title">Metode Pembayaran</div>
+                <div class="informasi-list">
+                    <div class="informasi-item"><i class="material-icons-outlined">account_balance_wallet</i><span><h6>Saldo Akun</h6><p>Pembayaran langsung dari saldo member.</p></span></div>
+                    <div class="informasi-item"><i class="material-icons-outlined">qr_code</i><span><h6>QR Pay</h6><p>Scan QR untuk pembayaran cepat.</p></span></div>
+                    <div class="informasi-item"><i class="material-icons-outlined">credit_card</i><span><h6>Transfer Bank</h6><p>Transfer ke rekening tujuan yang tersedia.</p></span></div>
+                </div>
+            </div>
+
+            <div class="checkout-card">
+                <div class="checkout-title">Aksi</div>
+                <div class="account-action-list">
+                    <button class="account-action-btn" onclick="openSection('inputpin')"><i class="material-icons-outlined">vpn_key</i><span>Lanjutkan</span></button>
+                    <button class="account-action-btn" onclick="openSection('beranda')"><i class="material-icons-outlined">cancel</i><span>Batal</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="transaksi-lunas" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="account-hero">
+                <div class="account-avatar"><i class="material-icons-outlined">task_alt</i></div>
+                <div class="account-hero-info">
+                    <h5>Transaksi Lunas</h5>
+                    <p>Daftar transaksi yang sudah berhasil dibayar</p>
+                    <span class="account-badge">Selesai</span>
+                </div>
+                <button class="account-edit-btn" onclick="openSection('transaksi')"><i class="material-icons-outlined">arrow_back</i></button>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Ringkasan Lunas</div>
+                <div class="account-balance-grid">
+                    <div class="account-stat"><p>Total Lunas</p><h6>12</h6></div>
+                    <div class="account-stat"><p>Nominal</p><h6>Rp 1.250.000</h6></div>
+                    <div class="account-stat"><p>Hari Ini</p><h6>4</h6></div>
+                    <div class="account-stat"><p>Status</p><h6>Aktif</h6></div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Daftar Transaksi Lunas</div>
+                <div class="history-list">
+                    <div class="history-item" onclick="openSection('ctkstruk')">
+                        <div class="history-icon success"><i class="material-icons-outlined">check</i></div>
+                        <div class="history-content">
+                            <div class="history-top"><h6>Pulsa Telkomsel</h6><span class="status success">Lunas</span></div>
+                            <p>Rp 50.000 • 09 Juli 2026, 10:15</p>
+                            <small>ID Trx: TRX880021</small>
+                        </div>
+                    </div>
+                    <div class="history-item" onclick="openSection('ctkstruk')">
+                        <div class="history-icon success"><i class="material-icons-outlined">check</i></div>
+                        <div class="history-content">
+                            <div class="history-top"><h6>Token PLN</h6><span class="status success">Lunas</span></div>
+                            <p>Rp 100.000 • 09 Juli 2026, 09:30</p>
+                            <small>ID Trx: TRX880022</small>
+                        </div>
+                    </div>
+                    <div class="history-item" onclick="openSection('ctkstruk')">
+                        <div class="history-icon success"><i class="material-icons-outlined">check</i></div>
+                        <div class="history-content">
+                            <div class="history-top"><h6>Paket Data</h6><span class="status success">Lunas</span></div>
+                            <p>Rp 25.000 • 09 Juli 2026, 08:45</p>
+                            <small>ID Trx: TRX880023</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account-card">
+                <div class="account-card-title">Aksi</div>
+                <div class="account-action-list">
+                    <button class="account-action-btn" onclick="openSection('ctkstruk')"><i class="material-icons-outlined">print</i><span>Cetak Struk</span></button>
+                    <button class="account-action-btn" onclick="openSection('transaksi')"><i class="material-icons-outlined">arrow_back</i><span>Kembali</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ctkstruk" class="tab-content" style="max-width: 666px;margin:0 auto;min-height:100vh;">
+        <div class="container section-wrap">
+            <div class="account-hero">
+                <div class="account-avatar"><i class="material-icons-outlined">print</i></div>
+                <div class="account-hero-info">
+                    <h5>Cetak Struk</h5>
+                    <p>Struk transaksi siap dicetak atau disimpan</p>
+                    <span class="account-badge">Print Ready</span>
+                </div>
+                <button class="account-edit-btn" onclick="openSection('transaksi-lunas')"><i class="material-icons-outlined">arrow_back</i></button>
+            </div>
+
+            <div class="checkout-card">
+                <div class="checkout-title">Struk Transaksi</div>
+                <div class="detailtrx-row"><span>ID Trx</span><strong>TRX880021</strong></div>
+                <div class="detailtrx-row"><span>Produk</span><strong>Pulsa Telkomsel 50.000</strong></div>
+                <div class="detailtrx-row"><span>Nomor Tujuan</span><strong>08xxxxxxxxxx</strong></div>
+                <div class="detailtrx-row"><span>Nominal</span><strong>Rp 50.000</strong></div>
+                <div class="detailtrx-row"><span>Biaya Admin</span><strong>Rp 1.500</strong></div>
+                <div class="detailtrx-row"><span>Total Bayar</span><strong>Rp 51.500</strong></div>
+                <div class="detailtrx-row"><span>Status</span><strong><span class="status success">Lunas</span></strong></div>
+                <div class="detailtrx-row"><span>Tanggal</span><strong>09 Juli 2026, 10:15</strong></div>
+            </div>
+
+            <div class="checkout-card">
+                <div class="checkout-title">Informasi Toko</div>
+                <div class="informasi-list">
+                    <div class="informasi-item"><i class="material-icons-outlined">store</i><span><h6>Pupu Celluler</h6><p>Portal transaksi digital cepat dan aman.</p></span></div>
+                    <div class="informasi-item"><i class="material-icons-outlined">call</i><span><h6>Kontak</h6><p>CS aktif 24 jam untuk bantuan transaksi.</p></span></div>
+                    <div class="informasi-item"><i class="material-icons-outlined">location_on</i><span><h6>Cabang</h6><p>Pelayanan online dan offline tersedia.</p></span></div>
+                </div>
+            </div>
+
+            <div class="checkout-card">
+                <div class="checkout-title">Aksi Struk</div>
+                <div class="account-action-list">
+                    <button class="account-action-btn" onclick="window.print()"><i class="material-icons-outlined">print</i><span>Print</span></button>
+                    <button class="account-action-btn" onclick="openSection('transaksi-lunas')"><i class="material-icons-outlined">arrow_back</i><span>Kembali</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="menuOffcanvasLabel">Menu Utama</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="menu-offcanvas-card">
+            <h6>{{nama_user}}</h6>
+            <p>Selamat datang di dashboard akun kamu.</p>
+        </div>
+        <div class="offcanvas-menu">
+            <a href="javascript:void(0)" onclick="openSection('beranda'); hideOffcanvas();"><i class="material-icons-outlined">home</i><span>Halaman Beranda</span></a>
+            <a href="javascript:void(0)" onclick="openSection('transaksi'); hideOffcanvas();"><i class="material-icons-outlined">receipt_long</i><span>Halaman Riwayat</span></a>
+            <a href="javascript:void(0)" onclick="openSection('rekap'); hideOffcanvas();"><i class="material-icons-outlined">bar_chart</i><span>Halaman Rekap</span></a>
+            <a href="javascript:void(0)" onclick="openSection('informasi'); hideOffcanvas();"><i class="material-icons-outlined">info</i><span>Halaman Informasi</span></a>
+            <a href="javascript:void(0)" onclick="openSection('akun'); hideOffcanvas();"><i class="material-icons-outlined">person</i><span>Halaman Akun Saya</span></a>
+            <hr>
+            <a href="javascript:void(0)" onclick="openSection('login'); hideOffcanvas();"><i class="material-icons-outlined">login</i><span>Halaman Login</span></a>
+            <a href="javascript:void(0)" onclick="openSection('daftar'); hideOffcanvas();"><i class="material-icons-outlined">person_add</i><span>Halaman Daftar</span></a>
+            <hr>
+            <a href="javascript:void(0)" onclick="openSection('toptup-saldo'); hideOffcanvas();"><i class="material-icons-outlined">account_balance_wallet</i><span>Halaman Top Up Saldo</span></a>
+            <a href="javascript:void(0)" onclick="openSection('qrpay'); hideOffcanvas();"><i class="material-icons-outlined">qr_code</i><span>Halaman QR Pay</span></a>            
+            <a href="javascript:void(0)" onclick="openSection('inputpin'); hideOffcanvas();"><i class="material-icons-outlined">vpn_key</i><span>Halaman Input PIN</span></a>
+            <hr>
+            <a href="javascript:void(0)" onclick="openSection('Chut'); hideOffcanvas();"><i class="material-icons-outlined">receipt_long</i><span>Halaman Catatan Hutang</span></a>
+            <a href="javascript:void(0)" onclick="openSection('Msaldo'); hideOffcanvas();"><i class="material-icons-outlined">sync_alt</i><span>Halaman Mutasi Saldo</span></a>
+            <a href="javascript:void(0)" onclick="openSection('verif'); hideOffcanvas();"><i class="material-icons-outlined">verified_user</i><span>Halaman Verifikasi Akun</span></a>
+            <hr>
+            <a href="javascript:void(0)" onclick="openSection('detailtrx'); hideOffcanvas();"><i class="material-icons-outlined">receipt_long</i><span>Halaman Detail Transaksi</span></a>
+            <a href="javascript:void(0)" onclick="openSection('chackout'); hideOffcanvas();"><i class="material-icons-outlined">shopping_cart_checkout</i><span>Halaman Chackout</span></a>         
+            <a href="javascript:void(0)" onclick="openSection('transaksi-lunas'); hideOffcanvas();"><i class="material-icons-outlined">task_alt</i><span>Halaman Transaksi Lunas</span></a>            
+            <a href="javascript:void(0)" onclick="openSection('ctkstruk'); hideOffcanvas();"><i class="material-icons-outlined">print</i><span>Halaman Cetak Struk</span></a>        
+            <hr>  
+            <a href="javascript:void(0)" onclick="openSection('pulsa'); hideOffcanvas();"><i class="material-icons-outlined">print</i><span>Halaman Pulsa Reguler</span></a>             
+            </br>
+            </br>
+            </br>
+        </div>
+    </div>
+</div>
+
+<div class="bottom-navbar">
+    <div class="bottom-nav">
+        <button class="nav-item active" onclick="openSection('beranda')"><i class="material-icons-outlined">home</i><span>Beranda</span></button>
+        <button class="nav-item" onclick="openSection('transaksi')"><i class="material-icons-outlined">compare_arrows</i><span>Riwayat</span></button>
+        <button class="nav-item" onclick="openSection('rekap')"><i class="material-icons-outlined">bar_chart</i><span>Rekap</span></button>
+        <button class="nav-item" onclick="openSection('informasi')"><i class="material-icons-outlined">info</i><span>Informasi</span></button>
+        <button class="nav-item" onclick="openSection('akun')"><i class="material-icons-outlined">person</i><span>Akun</span></button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
