@@ -28,7 +28,13 @@ async function fetchTransactions(page = 1) {
 }
 
 async function loadAllTransactions(page = 1) {
+    const container = document.getElementById('history-list');
+    if (container && page === 1) {
+        container.innerHTML = '<div class="informasi-item"><i class="material-icons-outlined">sync</i><span><h6>Memuat riwayat...</h6><p>Mohon tunggu sebentar.</p></span></div>';
+    }
+
     const nextData = await fetchTransactions(page);
+
     if (nextData.length > 0) {
         riwayatTransaksi = riwayatTransaksi.concat(nextData);
         renderRiwayatTransaksi(riwayatTransaksi);
@@ -49,7 +55,10 @@ function openSection(id) {
 
     window.location.hash = id;
 
-    if (id === 'transaksi') loadAllTransactions(1);
+    if (id === 'transaksi') {
+        riwayatTransaksi = [];
+        loadAllTransactions(1);
+    }
     if (id === 'Mutasi-saldo') loadMutasiSaldo();
     if (id === 'catatan-hutang') renderDebts();
 }
@@ -340,6 +349,7 @@ updatePinDots();
 
 document.addEventListener('DOMContentLoaded', () => {
     if (location.hash.replace('#', '') === 'transaksi') {
+        riwayatTransaksi = [];
         loadAllTransactions(1);
     }
 });
